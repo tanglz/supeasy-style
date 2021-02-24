@@ -10,7 +10,7 @@ export class WelcomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.name=localStorage.getItem('username');
+    //this.name=localStorage.getItem('username');
   }
 
 }
