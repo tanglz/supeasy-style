@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class HttpService {
-  base_url='http://3.82.179.128/api/';
+  base_url='http://springbootsupeasy-env.eba-wk98fipi.us-east-1.elasticbeanstalk.com/api/';
   constructor(private http:HttpClient) { }
 
   register(params:any){

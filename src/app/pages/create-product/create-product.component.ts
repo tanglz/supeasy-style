@@ -14,7 +14,7 @@ export class CreateProductComponent implements OnInit {
   imgsList:string[]=[];
   previewImage: string | undefined = '';
   previewVisible = false;
-  url='http://3.82.179.128/api/image/upload'
+  url='http://springbootsupeasy-env.eba-wk98fipi.us-east-1.elasticbeanstalk.com/api/image/upload'
 
   constructor(private fb:FormBuilder, private https:HttpService) { }
 
