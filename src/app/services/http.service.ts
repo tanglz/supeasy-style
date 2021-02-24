@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class HttpService {
-  base_url='http://127.0.0.1:8080/api/';
+  base_url='http://3.82.179.128/api/';
   constructor(private http:HttpClient) { }
 
   register(params:any){

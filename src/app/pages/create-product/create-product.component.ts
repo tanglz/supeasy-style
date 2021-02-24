@@ -14,7 +14,7 @@ export class CreateProductComponent implements OnInit {
   imgsList:string[]=[];
   previewImage: string | undefined = '';
   previewVisible = false;
-  url='http://127.0.0.1:8080/api/image/upload'
+  url='http://3.82.179.128/api/image/upload'
 
   constructor(private fb:FormBuilder, private https:HttpService) { }
 
