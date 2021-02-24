@@ -27,4 +27,5 @@ export class HttpService {
     return this.http.get(this.base_url+'store/flyer?storeId='+params);
 
   }
+
 }

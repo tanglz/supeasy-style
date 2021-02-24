@@ -14,4 +14,11 @@
       .login-form-button {
         width: 100%;
       }
-    
+    .content{
+      display: flex;
+      flex-direction: column;
+      justify-content: center; 
+      align-items: center;   
+      height: 100%;
+width: 100%;
+    }
