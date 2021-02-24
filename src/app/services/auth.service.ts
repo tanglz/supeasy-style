@@ -27,7 +27,7 @@ export class AuthService {
 
   login(parms:any) {
       
-    return this.http.post<any>("http://localhost:8080/api/"+"user/login", parms)
+    return this.http.post<any>("http://springbootsupeasy-env.eba-wk98fipi.us-east-1.elasticbeanstalk.com/api/"+"user/login", parms)
           .pipe(map(user => {
               // login successful if there's a jwt token in the response
               if (user.status) {
