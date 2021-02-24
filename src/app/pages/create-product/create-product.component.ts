@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { NzUploadFile } from 'ng-zorro-antd';
 import { HttpService } from 'src/app/services/http.service';
 
@@ -16,7 +17,7 @@ export class CreateProductComponent implements OnInit {
   previewVisible = false;
   url='http://springbootsupeasy-env.eba-wk98fipi.us-east-1.elasticbeanstalk.com/api/image/upload'
 
-  constructor(private fb:FormBuilder, private https:HttpService) { }
+  constructor(private fb:FormBuilder, private https:HttpService, private router:Router) { }
 
   ngOnInit(): void {
     this.formGroup=this.fb.group({
@@ -58,6 +59,9 @@ export class CreateProductComponent implements OnInit {
     
     this.https.createProduct(this.formGroup.value).subscribe(res=>{
       console.log(res);
+      if (res['status']) {
+        this.router.navigateByUrl('product-list')
+      }
     })
 
   }
