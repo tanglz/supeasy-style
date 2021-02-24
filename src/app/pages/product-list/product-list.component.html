@@ -1,0 +1,18 @@
+<button nz-button  [nzType]="'primary'" (click)="toCreateProductPage()">Create Product</button>
+<nz-table #basicTable [nzData]="products">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of basicTable.data">
+        <td>{{data.name}}</td>
+        <td>{{data.price}}</td>
+        <td>{{data.description}}</td>
+
+      </tr>
+    </tbody>
+  </nz-table>

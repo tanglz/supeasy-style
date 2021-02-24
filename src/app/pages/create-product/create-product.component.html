@@ -1,0 +1,63 @@
+<form nz-form [formGroup]="formGroup" class="goods-form" (ngSubmit)="submitForm()">
+    <nz-form-item>
+        <nz-form-label [nzSm]="4" [nzXs]="24" nzRequired nzFor="name">name</nz-form-label>
+      <nz-form-control >
+        <nz-input-group  >
+          <div  nz-col nzSpan="8">
+          <input type="text" nz-input formControlName="name" placeholder="Product name" />
+        </div>
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item >
+        <nz-form-label [nzSm]="4" [nzXs]="24" nzRequired nzFor="price">Price</nz-form-label>
+      <nz-form-control >
+        <nz-input-group >
+          <div  nz-col nzSpan="5">
+          <input type="number" nz-input formControlName="price" placeholder="Goods price" />
+          </div>
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item >
+      <nz-form-label [nzSm]="4" [nzXs]="24" nzRequired nzFor="description">description</nz-form-label>
+    <nz-form-control >
+      <nz-input-group >
+        <div  nz-col nzSpan="5">
+            <input type="text" nz-input formControlName="description" placeholder="description" />
+            </div>
+      </nz-input-group>
+    </nz-form-control>
+  </nz-form-item>
+
+    
+   
+    <nz-form-item >
+      <nz-form-label [nzSm]="4" [nzXs]="24" nzRequired nzFor="images">Images</nz-form-label>
+    <div class="clearfix">
+        <nz-upload
+          nzAction={{url}}
+          nzListType="picture-card"
+          [(nzFileList)]="fileList"
+          [nzShowButton]="fileList.length < 1"
+          [nzPreview]="handlePreview"
+        >
+          <i nz-icon nzType="plus"></i>
+          <div class="ant-upload-text">Upload</div>
+        </nz-upload>
+        <nz-modal [nzVisible]="previewVisible" [nzContent]="modalContent" [nzFooter]="null" (nzOnCancel)="previewVisible = false">
+          <ng-template #modalContent>
+            <img [src]="previewImage" [ngStyle]="{ width: '100%' }" />
+          </ng-template>
+        </nz-modal>
+      </div>
+    </nz-form-item>
+
+ 
+      <div  nz-col nzSpan="6">
+        <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'">Submit</button>
+      </div>
+
+  </form>
