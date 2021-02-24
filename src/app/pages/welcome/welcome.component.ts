@@ -14,7 +14,8 @@ export class WelcomeComponent implements OnInit {
 
   ngOnInit() {
     this.name=localStorage.getItem('username');
-    this.genQrcode('http://test.com')
+    let id = localStorage.getItem('id')
+    this.genQrcode('http://54.87.170.217/client/home/'+id)
   }
 
   genQrcode(url:string){
