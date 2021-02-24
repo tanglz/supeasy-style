@@ -60,7 +60,7 @@ export class CreateProductComponent implements OnInit {
     this.https.createProduct(this.formGroup.value).subscribe(res=>{
       console.log(res);
       if (res['status']) {
-        this.router.navigateByUrl('product-list')
+        this.router.navigateByUrl('index/product-list')
       }
     })
 
