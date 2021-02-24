@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./welcome.component.css']
 })
 export class WelcomeComponent implements OnInit {
-
+  name:string;
   constructor() { }
 
   ngOnInit() {
+    this.name=localStorage.getItem('username');
   }
 
 }
