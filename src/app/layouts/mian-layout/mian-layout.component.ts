@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mian-layout.component.css']
 })
 export class MianLayoutComponent implements OnInit {
+  
   isCollapsed:boolean;
   constructor() { }
 
