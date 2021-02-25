@@ -54,7 +54,7 @@ export class CreateProductComponent implements OnInit {
         imgs.push(val.response.url)
       })
       console.log(imgs)
-      this.formGroup.addControl('imageUrl',new FormControl(imgs, Validators.required));
+      this.formGroup.addControl('imageUrl',new FormControl(imgs.toString, Validators.required));
     }
 
     
