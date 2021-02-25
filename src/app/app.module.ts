@@ -28,6 +28,7 @@ import { CookieService } from 'ngx-cookie-service';
 import { JwtInterceptor } from './helps/jwt.interceptor';
 import { HomeComponent } from './pages/clients/home/home.component';
 import { NzListModule } from 'ng-zorro-antd/list';
+import { NzImageModule } from 'ng-zorro-antd/image';
 
 registerLocaleData(en);
 
@@ -58,7 +59,8 @@ registerLocaleData(en);
     NzTableModule,
     NzUploadModule,
     NzModalModule,
-    NzListModule
+    NzListModule,
+    NzImageModule
     
     
   ],
