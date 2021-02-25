@@ -51,7 +51,7 @@ export class CreateProductComponent implements OnInit {
     if (this.fileList.length!=0) {
       this.fileList.forEach(val=>{
         console.log(val.response)
-        imgs.push(val.response.image_url)
+        imgs.push(val.response.url)
       })
       this.formGroup.addControl('imageUrl',new FormControl(imgs, Validators.required));
     }
