@@ -23,7 +23,7 @@ export class CreateProductComponent implements OnInit {
     this.formGroup=this.fb.group({
       name:[null, [Validators.required]],
       price:[null, [Validators.required]],
-      images:[null, [Validators.required]],
+      imageUrl:[null, [Validators.required]],
       description:[null]
     })
   }
@@ -33,8 +33,8 @@ export class CreateProductComponent implements OnInit {
     if (!file.url && !file.preview) {
       file.preview = await this.getBase64(file.originFileObj!);
     }
-    this.previewImage = "http://springbootsupeasy-env.eba-wk98fipi.us-east-1.elasticbeanstalk.com/api/image/files/"+file.url ||"http://springbootsupeasy-env.eba-wk98fipi.us-east-1.elasticbeanstalk.com/api/image/files/"+ file.preview;
-    this.imgsList.push("http://springbootsupeasy-env.eba-wk98fipi.us-east-1.elasticbeanstalk.com/api/image/files/"+file.url)
+    this.previewImage = file.url || file.preview;
+    this.imgsList.push(file.url)
     this.previewVisible = true;
     
   };
