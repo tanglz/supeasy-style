@@ -50,13 +50,13 @@ export class CreateProductComponent implements OnInit {
     let imgs:string[]=[];
     if (this.fileList.length!=0) {
       this.fileList.forEach(val=>{
-        console.log(val.response)
+       
         imgs.push(val.response.url)
       })
-      console.log(imgs)
-      this.formGroup.addControl('imageUrl',new FormControl(imgs.toString, Validators.required));
+     
+      this.formGroup.addControl('imageUrl',new FormControl(imgs.toString(), Validators.required));
     }
-
+    console.log(this.formGroup.value)
     
     this.https.createProduct(this.formGroup.value).subscribe(res=>{
       console.log(res);
