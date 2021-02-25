@@ -7,17 +7,19 @@
     <div class="content">
         <nz-list nzItemLayout="horizontal">
             <nz-list-item *ngFor="let item of productList">
-              <nz-list-item-meta
-                nzAvatar=http://springbootsupeasy-env.eba-wk98fipi.us-east-1.elasticbeanstalk.com/api/image/files/{{item.imageUrl}}
+                <nz-list-item-meta
+                nzAvatar="http://springbootsupeasy-env.eba-wk98fipi.us-east-1.elasticbeanstalk.com/api/image/files/"{{item.imageUrl}}
                 nzDescription={{item.name}}
-              >
-                <nz-list-item-meta-title>
-                  <p>{{ item.price }} <span>CAD</span></p>
-                </nz-list-item-meta-title>
+                >
+              
+                    <nz-list-item-meta-title>
+                    {{ item.price }} <span>CAD</span>
+                    </nz-list-item-meta-title>
+                </nz-list-item-meta>
+              
                 <nz-list-item-meta-description>
                     <p>{{item.description}}</p>
                 </nz-list-item-meta-description>
-              </nz-list-item-meta>
             </nz-list-item>
             <nz-list-empty *ngIf="data.length === 0"></nz-list-empty>
           </nz-list>
