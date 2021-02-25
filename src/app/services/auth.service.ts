@@ -3,7 +3,6 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { HttpService } from './http.service';
 import { map } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
-import { Router } from '@angular/router';
 interface User{
   status:boolean;
   object:string;
@@ -17,7 +16,7 @@ export class AuthService {
   private currentUserSubject: BehaviorSubject<User>;
   public currentUser: Observable<User>;
 
-  constructor(private https:HttpService,private http: HttpClient,private router:Router) {
+  constructor(private https:HttpService,private http: HttpClient) {
       this.currentUserSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('currentUser')));
       this.currentUser = this.currentUserSubject.asObservable();
   }
@@ -39,7 +38,7 @@ export class AuthService {
                   localStorage.setItem('id', user['object']['id']);
                   this.currentUserSubject.next(user);
               }
-              this.router.navigateByUrl('/index/welcome')
+          
               return user;
           }));
          

@@ -19,6 +19,7 @@ export class LoginComponent implements OnInit {
       this.validateForm.controls[i].updateValueAndValidity();
     }
     this.auth.login(this.validateForm.value).subscribe(res=>{
+      console.log(res);
       if (res.status) {
         this.router.navigateByUrl('/index/welcome')
       }
