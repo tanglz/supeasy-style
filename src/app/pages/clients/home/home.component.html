@@ -1,6 +1,6 @@
 <div class="main">
     <div class="head">
-        <h1><span>Store:  </span>>{{name}}</h1>
+        <h1>{{storeName}}</h1>
         <h3><span>Address: </span>{{address}}</h3>
         <h3><span>Contact: </span>{{phone}}</h3>
     </div>
@@ -8,7 +8,7 @@
         <nz-list nzItemLayout="horizontal">
             <nz-list-item *ngFor="let item of productList">
                 <nz-list-item-meta
-                nzAvatar="http://springbootsupeasy-env.eba-wk98fipi.us-east-1.elasticbeanstalk.com/api/image/files/"{{item.imageUrl}}
+                nzAvatar={{item.imageUrl}}
                 nzDescription={{item.name}}
                 >
               

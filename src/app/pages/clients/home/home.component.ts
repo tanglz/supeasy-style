@@ -13,7 +13,7 @@ interface Product{
 })
 export class HomeComponent implements OnInit {
   storeId:string;
-  name:string;
+  storeName:string;
   address:string;
   phone:string;
   productList:Product[];
@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
     this.httpS.getStore(this.storeId).subscribe(res=>{
       console.log(res);
       if (res['status']) {
-        this.name=res['object']['userInfo']['name'];
+        this.storeName=res['object']['userInfo']['storeName'];
         this.address=res['object']['userInfo']['address'];
         this.phone=res['object']['userInfo']['phone'];
 
