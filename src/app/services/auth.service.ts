@@ -36,7 +36,7 @@ export class AuthService {
                   localStorage.setItem('currentUser', JSON.stringify(user['object']['token']));
                   localStorage.setItem('username', user['object']['name']);
                   localStorage.setItem('id', user['object']['id']);
-                  this.currentUserSubject.next(user);
+                  this.currentUserSubject.next(user['object']['token']);
               }
           
               return user;
