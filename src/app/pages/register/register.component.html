@@ -1,67 +1,79 @@
-<div class="content">
-  <h1>Register</h1>
-  <form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()">
-    <nz-form-item>
-      <nz-form-control nzErrorTip="Please input your name!">
-        <nz-input-group nzPrefixIcon="user">
-          <input type="text" nz-input formControlName="name" placeholder="name" />
-        </nz-input-group>
-      </nz-form-control>
-    </nz-form-item>
+<nz-layout>
+  <nz-header>SUPEASY</nz-header>
+  <nz-layout>
+    <nz-sider>
+      <p class="desc">SUPEASY is an online flyer system. It provides retailers and small business owners establishing an online store and creating an online flyer. The flyer is a webpage which could be visited on mobile phone and listed the store's information and products. In the future, they could manage their stores online.</p>
+    </nz-sider>
+    <nz-content>
+      <div class="content">
+        <h1>Register</h1>
+        <form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()">
+          <nz-form-item>
+            <nz-form-control nzErrorTip="Please input your name!">
+              <nz-input-group nzPrefixIcon="user">
+                <input type="text" nz-input formControlName="name" placeholder="name" />
+              </nz-input-group>
+            </nz-form-control>
+          </nz-form-item>
+      
+      
+          <nz-form-item>
+            <nz-form-control nzErrorTip="Please input your email!">
+              <nz-input-group nzPrefixIcon="mail">
+                <input type="text" nz-input formControlName="email" placeholder="email" />
+              </nz-input-group>
+            </nz-form-control>
+          </nz-form-item>
+      
+          <nz-form-item>
+            <nz-form-control nzErrorTip="Please input your phone!">
+              <nz-input-group nzPrefixIcon="phone">
+                <input type="text" nz-input formControlName="phone" placeholder="phone" />
+              </nz-input-group>
+            </nz-form-control>
+          </nz-form-item>
+      
+      
+          <nz-form-item>
+            <nz-form-control nzErrorTip="Please input your address!">
+              <nz-input-group nzPrefixIcon="home">
+                <input type="text" nz-input formControlName="address" placeholder="address" />
+              </nz-input-group>
+            </nz-form-control>
+          </nz-form-item>
+      
+          <nz-form-item>
+            <nz-form-control nzErrorTip="Please input your description!">
+              <nz-input-group nzPrefixIcon="file-text">
+                <textarea type="text" nz-input formControlName="description" placeholder="description" />
+              </nz-input-group>
+            </nz-form-control>
+          </nz-form-item>
+      
+      
+          <nz-form-item>
+            <nz-form-control nzErrorTip="Please input your Password!">
+              <nz-input-group nzPrefixIcon="lock">
+                <input type="password" nz-input formControlName="password" placeholder="Password" />
+              </nz-input-group>
+            </nz-form-control>
+          </nz-form-item>
+      
+          <nz-form-item>
+            <nz-form-control nzErrorTip="Please input your store name!">
+              <nz-input-group nzPrefixIcon="lock">
+                <input type="text" nz-input formControlName="storeName" placeholder="Store Name" />
+              </nz-input-group>
+            </nz-form-control>
+          </nz-form-item>
+      
+          <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'">Register</button>
+          Or <a routerLink="/login"> Login! </a>
+        </form>
+      
+      </div>
+    </nz-content>
+  </nz-layout>
+  <nz-footer>@2021 <p>Made by Lizhen Tang</p></nz-footer>
+</nz-layout>
 
-
-    <nz-form-item>
-      <nz-form-control nzErrorTip="Please input your email!">
-        <nz-input-group nzPrefixIcon="mail">
-          <input type="text" nz-input formControlName="email" placeholder="email" />
-        </nz-input-group>
-      </nz-form-control>
-    </nz-form-item>
-
-    <nz-form-item>
-      <nz-form-control nzErrorTip="Please input your phone!">
-        <nz-input-group nzPrefixIcon="phone">
-          <input type="text" nz-input formControlName="phone" placeholder="phone" />
-        </nz-input-group>
-      </nz-form-control>
-    </nz-form-item>
-
-
-    <nz-form-item>
-      <nz-form-control nzErrorTip="Please input your address!">
-        <nz-input-group nzPrefixIcon="home">
-          <input type="text" nz-input formControlName="address" placeholder="address" />
-        </nz-input-group>
-      </nz-form-control>
-    </nz-form-item>
-
-    <nz-form-item>
-      <nz-form-control nzErrorTip="Please input your description!">
-        <nz-input-group nzPrefixIcon="file-text">
-          <textarea type="text" nz-input formControlName="description" placeholder="description" />
-        </nz-input-group>
-      </nz-form-control>
-    </nz-form-item>
-
-
-    <nz-form-item>
-      <nz-form-control nzErrorTip="Please input your Password!">
-        <nz-input-group nzPrefixIcon="lock">
-          <input type="password" nz-input formControlName="password" placeholder="Password" />
-        </nz-input-group>
-      </nz-form-control>
-    </nz-form-item>
-
-    <nz-form-item>
-      <nz-form-control nzErrorTip="Please input your store name!">
-        <nz-input-group nzPrefixIcon="lock">
-          <input type="text" nz-input formControlName="storeName" placeholder="Store Name" />
-        </nz-input-group>
-      </nz-form-control>
-    </nz-form-item>
-
-    <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'">Register</button>
-    Or <a routerLink="/login"> Login! </a>
-  </form>
-
-</div>
