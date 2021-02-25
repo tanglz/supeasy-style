@@ -9,6 +9,13 @@
     display: flex;
     flex-direction: column;
     height: 100px;
+    background: #1891ff;
+}
+.head h1{
+    color: #fff;
+}
+.head h3{
+    color: #fff;
 }
 .content{
     display: flex;

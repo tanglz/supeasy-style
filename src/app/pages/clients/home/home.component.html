@@ -1,18 +1,22 @@
 <div class="main">
     <div class="head">
-        <h1>{{name}}</h1>
-        <h3>{{address}}</h3>
+        <h1><span>Store:  </span>>{{name}}</h1>
+        <h3><span>Address: </span>{{address}}</h3>
+        <h3><span>Contact: </span>{{phone}}</h3>
     </div>
     <div class="content">
         <nz-list nzItemLayout="horizontal">
             <nz-list-item *ngFor="let item of productList">
               <nz-list-item-meta
-                nzAvatar="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
+                nzAvatar=http://springbootsupeasy-env.eba-wk98fipi.us-east-1.elasticbeanstalk.com/api/image/files/+{{item.imageUrl}}
                 nzDescription={{item.name}}
               >
                 <nz-list-item-meta-title>
-                  <p>{{ item.price }}</p>
+                  <p>{{ item.price }} <span>CAD</span></p>
                 </nz-list-item-meta-title>
+                <nz-list-item-meta-description>
+                    <p>{{item.description}}</p>
+                </nz-list-item-meta-description>
               </nz-list-item-meta>
             </nz-list-item>
             <nz-list-empty *ngIf="data.length === 0"></nz-list-empty>

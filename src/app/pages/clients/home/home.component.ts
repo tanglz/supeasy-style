@@ -15,6 +15,7 @@ export class HomeComponent implements OnInit {
   storeId:string;
   name:string;
   address:string;
+  phone:string;
   productList:Product[];
 
   constructor(private route:ActivatedRoute,private httpS:HttpService) { }
@@ -26,6 +27,8 @@ export class HomeComponent implements OnInit {
       if (res['status']) {
         this.name=res['object']['userInfo']['name'];
         this.address=res['object']['userInfo']['address'];
+        this.phone=res['object']['userInfo']['phone'];
+
         this.productList=<Product[]>res['object']['productInfoList'];
 
       }
